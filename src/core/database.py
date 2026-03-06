@@ -1,10 +1,14 @@
 import sqlite3
 import pandas as pd
-import numpy as np # Add this import
+import numpy as np 
 from typing import List, Optional
 from pydantic import BaseModel
 
 class CapturedEvent(BaseModel):
+    """
+    Represents a single atomic action with its associated visual state.
+    Using Pydantic ensures type-safety when passing data to LLMs or Orchestrators.
+    """
     capture_id: str
     event_id: str
     timestamp: str
@@ -14,14 +18,19 @@ class CapturedEvent(BaseModel):
     event_type: Optional[str] = None
     image_path: str
     url: Optional[str] = None
-    # We use Optional[str] = None to allow for missing data safely
     clipboard_content: Optional[str] = None
 
 class DatabaseManager:
-    def __init__(self, db_path: str):
+    """
+    Handles all SQLite interactions
+    """
+    def __init__(self, db_path: str = "data/test_data.db"):
         self.db_path = db_path
 
     def get_joined_data(self, employee_id: str) -> List[CapturedEvent]:
+        """
+        Fetches combined Event and Capture data for a specific employee.
+        """
         query = """
         SELECT 
             c.id as capture_id,
@@ -40,17 +49,32 @@ class DatabaseManager:
         ORDER BY c.timestamp ASC
         """
         
-        with sqlite3.connect(self.db_path) as conn:
-            df = pd.read_sql_query(query, conn, params=(employee_id,))
-            
-            # THE FIX: Replace all NaN values with None
-            # Pydantic understands 'None', but it hates 'NaN' (float)
-            df = df.replace({np.nan: None})
-            
-        return [CapturedEvent(**row) for row in df.to_dict('records')]
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                df = pd.read_sql_query(query, conn, params=(employee_id,))
+                
+                # Critical for Pydantic: Convert NumPy/Pandas NaN to Python None
+                df = df.replace({np.nan: None})
+                
+            return [CapturedEvent(**row) for row in df.to_dict('records')]
+        except Exception as e:
+            print(f"Error querying database: {e}")
+            return []
 
     def get_employee_ids(self) -> List[str]:
+        """Returns a list of all unique employee IDs in the dataset."""
+        query = "SELECT DISTINCT id_employee FROM captures"
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
-            cursor.execute("SELECT DISTINCT id_employee FROM captures")
+            cursor.execute(query)
             return [row[0] for row in cursor.fetchall()]
+
+    def get_full_dataset(self) -> dict[str, List[CapturedEvent]]:
+        """
+        Returns a dictionary mapping employee_id to their list of events.
+        """
+        all_data = {}
+        ids = self.get_employee_ids()
+        for emp_id in ids:
+            all_data[emp_id] = self.get_joined_data(emp_id)
+        return all_data
