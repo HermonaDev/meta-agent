@@ -13,3 +13,5 @@ Pillow
 tqdm
 loguru
 rich 
+
+requests
