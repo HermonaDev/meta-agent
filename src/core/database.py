@@ -3,22 +3,7 @@ import pandas as pd
 import numpy as np 
 from typing import List, Optional
 from pydantic import BaseModel
-
-class CapturedEvent(BaseModel):
-    """
-    Represents a single atomic action with its associated visual state.
-    Using Pydantic ensures type-safety when passing data to LLMs or Orchestrators.
-    """
-    capture_id: str
-    event_id: str
-    timestamp: str
-    id_employee: str
-    app_name: Optional[str] = None
-    window_title: Optional[str] = None
-    event_type: Optional[str] = None
-    image_path: str
-    url: Optional[str] = None
-    clipboard_content: Optional[str] = None
+from src.core.schemas import CapturedEvent
 
 class DatabaseManager:
     """
