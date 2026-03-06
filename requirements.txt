@@ -1,6 +1,15 @@
-#sqlite3        # Built-in, but listed for clarity
-pydantic       # Data schemas
-pandas         # Data manipulation
-python-dotenv  # For API keys (LLM/Vision)
-openai         # For the Vision/Discovery logic
-loguru         # Professional logging
+# Data
+pandas
+
+# AI & Orchestration
+openai #google-generativeai /anthropic
+pydantic 
+python-dotenv
+
+# Vision & Image Processing
+Pillow
+
+# Quality of Life
+tqdm
+loguru
+rich 
