@@ -1,5 +1,10 @@
 venv/
 data/
-src/__pycache__/
+__pycache__/
 discovery/__pycache__/
 core/__pycache__/
+.env
+*.log
+*.db
+*.pyc
+*.bak
