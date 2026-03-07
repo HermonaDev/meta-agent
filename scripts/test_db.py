@@ -1,6 +1,7 @@
 import sys
 import os
 from pathlib import Path
+from typing import Counter
 
 sys.path.append(str(Path(__file__).parent.parent))
 
@@ -25,8 +26,10 @@ def run_diagnostic():
 
         for emp_id in employees:
             data = db.get_joined_data(emp_id)
+            counts = Counter([e.timestamp.split('T')[0] for e in data])
             print(f"Employee: {emp_id} | Events: {len(data)}")
-            
+            print(f"  - Daily Counts: {dict(counts)}")
+
             if data:
                 # Check first 5 images for reachability
                 unreachable = 0
