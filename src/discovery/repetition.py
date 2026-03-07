@@ -1,55 +1,64 @@
 import hashlib
 from collections import Counter
 from typing import List, Dict
-from .models import WorkflowPattern
-from ..core.database import CapturedEvent
+from src.core.schemas import CapturedEvent, WorkflowBlueprint, WorkflowStep
+from src.core.utils import calculate_persistence_metrics, map_raw_event_to_action, normalize_window_title
 
 class PatternMatcher:
     def __init__(self, window_size: int = 5):
         self.window_size = window_size
 
-    def find_patterns(self, events: List[CapturedEvent]) -> List[WorkflowPattern]:
+    def find_repetitive_blueprints(self, events: List[CapturedEvent]) -> List[WorkflowBlueprint]:
         patterns = {}
         
-        # Slide through events to find sequences
+        # 1. SLIDING WINDOW (Syntactic Clustering)
         for i in range(len(events) - self.window_size + 1):
             window = events[i : i + self.window_size]
             
-            # Create a unique signature based on App and Window Title
-            # We ignore specific timestamps to find repetitions
-            sig_list = [f"{e.app_name}|{e.window_title}" for e in window]
-            sig_str = "->".join(sig_list)
+            # Create a 'Fuzzy Signature'
+            # Use Normalized Title + App + Event Type
+            sig_parts = []
+            for e in window:
+                norm_title = normalize_window_title(e.window_title)
+                sig_parts.append(f"{e.app_name}|{e.event_type}|{norm_title}")
+            
+            sig_str = "->".join(sig_parts)
             pattern_hash = hashlib.md5(sig_str.encode()).hexdigest()
             
             date = window[0].timestamp.split('T')[0]
             
             if pattern_hash not in patterns:
                 patterns[pattern_hash] = {
-                    "hash": pattern_hash,
-                    "apps": [e.app_name for e in window],
-                    "titles": [e.window_title for e in window],
-                    "event_ids": [e.event_id for e in window],
-                    "counts": Counter(),
-                    "raw_sig": sig_str
+                    "sample_events": window,
+                    "counts": Counter()
                 }
-            
             patterns[pattern_hash]["counts"][date] += 1
 
-        # Filter for patterns that actually repeat
-        results = []
+        # 2. PERSISTENCE SCORING
+        blueprints = []
         for p_hash, data in patterns.items():
-            days_active = len(data["counts"])
-            total_occurrences = sum(data["counts"].values())
+            persistence = calculate_persistence_metrics(data["counts"])
             
-            # Only keep patterns that happen more than once or across multiple days
-            if total_occurrences > 1:
-                results.append(WorkflowPattern(
-                    pattern_hash=p_hash,
-                    description=f"Task involving {data['apps'][0]} and {data['apps'][-1]}",
-                    app_sequence=data["apps"],
-                    representative_event_ids=data["event_ids"],
-                    daily_counts=dict(data["counts"]),
-                    persistence_score=days_active
+            # Requirement: Only high-value workflows
+            if persistence.total_occurrences > 2: # Found more than twice
+                steps = []
+                for idx, e in enumerate(data["sample_events"]):
+                    steps.append(WorkflowStep(
+                        step_id=idx,
+                        action=map_raw_event_to_action(e.event_type or ""),
+                        app_name=e.app_name or "Unknown",
+                        window_title=e.window_title,
+                        description="Raw discovered action", # To be filled by AI Labeler
+                        screenshot_url=e.image_path
+                    ))
+
+                blueprints.append(WorkflowBlueprint(
+                    workflow_id=f"WP-{p_hash[:8]}",
+                    employee_id=data["sample_events"][0].id_employee,
+                    intent_summary="Candidate Workflow", # To be filled by AI Labeler
+                    persistence=persistence,
+                    steps=steps
                 ))
         
-        return sorted(results, key=lambda x: (x.persistence_score, sum(x.daily_counts.values())), reverse=True)
+        # Sort by Persistence (4-day first, then frequency)
+        return sorted(blueprints, key=lambda x: (x.persistence.is_4day_persistent, x.persistence.total_occurrences), reverse=True)
