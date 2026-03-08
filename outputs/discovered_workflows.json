@@ -2,7 +2,7 @@
     {
         "workflow_id": "WP-0029b07b",
         "employee_id": "EMP-0053",
-        "intent_summary": "Based on the sequence and the screenshot provided, the user is currently on the refund dashboard of the ChipChip admin panel.\n\n**Goal:** Print the record from the dashboard.\n**Element:** Print button",
+        "intent_summary": "Refund a transaction",
         "persistence": {
             "daily_counts": {
                 "2026-02-23": 141,
@@ -20,7 +20,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-                "description": "Target: UI Component | Goal: Based on the sequence and the screenshot provided, the user is currently on the refund dashboard of the ChipChip admin panel.\n\n**Goal:** Print the record from the dashboard.\n**Element:** Print button",
+                "description": "Target: Refund button | Goal: Refund a transaction",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/2be637e5-d8c1-4304-93b6-4f82c44378a1.webp"
             },
@@ -29,7 +29,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-                "description": "Target: UI Component | Goal: Based on the sequence and the screenshot provided, the user is currently on the refund dashboard of the ChipChip admin panel.\n\n**Goal:** Print the record from the dashboard.\n**Element:** Print button",
+                "description": "Target: Refund button | Goal: Refund a transaction",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/087d47a5-fc2f-4858-b167-0b79fe340016.webp"
             },
@@ -38,7 +38,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-                "description": "Target: UI Component | Goal: Based on the sequence and the screenshot provided, the user is currently on the refund dashboard of the ChipChip admin panel.\n\n**Goal:** Print the record from the dashboard.\n**Element:** Print button",
+                "description": "Target: Refund button | Goal: Refund a transaction",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/789fc569-b2af-419c-8088-df2010c3fa63.webp"
             },
@@ -47,7 +47,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-                "description": "Target: UI Component | Goal: Based on the sequence and the screenshot provided, the user is currently on the refund dashboard of the ChipChip admin panel.\n\n**Goal:** Print the record from the dashboard.\n**Element:** Print button",
+                "description": "Target: Refund button | Goal: Refund a transaction",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/4f92146a-1fef-4d76-a19c-078d8c6d1431.webp"
             }
@@ -56,7 +56,7 @@
     {
         "workflow_id": "WP-6ad262fa",
         "employee_id": "EMP-0053",
-        "intent_summary": "Goal: Process a refund",
+        "intent_summary": "Confirm refund",
         "persistence": {
             "daily_counts": {
                 "2026-02-23": 64,
@@ -74,7 +74,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/users/userdetails?id=84f8c013-dbd2-4693-8d82-ef0dd60f1ebf - Google Chrome",
-                "description": "Target: Element: \"Yes\" button in the \"Are You Sure?\" confirmation modal. | Goal: Goal: Process a refund",
+                "description": "Target: Yes button | Goal: Confirm refund",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/e7ffae79-d357-475b-aa56-ba8cacda2bc2.webp"
             },
@@ -83,7 +83,7 @@
                 "action": "click",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-                "description": "Target: Element: \"Yes\" button in the \"Are You Sure?\" confirmation modal. | Goal: Goal: Process a refund",
+                "description": "Target: Yes button | Goal: Confirm refund",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/27922ba1-1eb0-486a-a916-a44e482524ad.webp"
             },
@@ -92,7 +92,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-                "description": "Target: Element: \"Yes\" button in the \"Are You Sure?\" confirmation modal. | Goal: Goal: Process a refund",
+                "description": "Target: Yes button | Goal: Confirm refund",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/2be637e5-d8c1-4304-93b6-4f82c44378a1.webp"
             },
@@ -101,7 +101,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-                "description": "Target: Element: \"Yes\" button in the \"Are You Sure?\" confirmation modal. | Goal: Goal: Process a refund",
+                "description": "Target: Yes button | Goal: Confirm refund",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/087d47a5-fc2f-4858-b167-0b79fe340016.webp"
             }
@@ -110,7 +110,7 @@
     {
         "workflow_id": "WP-56e4b36a",
         "employee_id": "EMP-0053",
-        "intent_summary": "Goal: View bank details for a refund request",
+        "intent_summary": "Close the bank details popup",
         "persistence": {
             "daily_counts": {
                 "2026-02-23": 65,
@@ -127,7 +127,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-                "description": "Target: Element: View button | Goal: Goal: View bank details for a refund request",
+                "description": "Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/3d11fdb1-be87-44c8-a0af-3a3faa244975.webp"
             },
@@ -136,7 +136,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-                "description": "Target: Element: View button | Goal: Goal: View bank details for a refund request",
+                "description": "Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/28d129d5-a4ae-4991-bca6-bb1cdabe1e58.webp"
             },
@@ -145,7 +145,7 @@
                 "action": "click",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-                "description": "Target: Element: View button | Goal: Goal: View bank details for a refund request",
+                "description": "Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/f2f08f00-8889-4443-b078-83f8fcb0a3eb.webp"
             },
@@ -154,7 +154,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-                "description": "Target: Element: View button | Goal: Goal: View bank details for a refund request",
+                "description": "Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/ef0b3125-3ea6-4ce8-9fd9-b4dd32c72c80.webp"
             }
@@ -163,7 +163,7 @@
     {
         "workflow_id": "WP-69830567",
         "employee_id": "EMP-0025",
-        "intent_summary": "The business intent is to download the \"Fix of warehouse\" spreadsheet in a specific file format. Based on the sequence provided, the user has initiated a download which triggered a save prompt from the browser.\n\nDownload the spreadsheet 'Fix of warehouse'",
+        "intent_summary": "Based on the sequence of user actions and the provided screenshot, here is the business intent and the targeted UI element:\n\n**Goal:** Download the \"Fix of warehouse\" spreadsheet as a Microsoft Excel (.xlsx) file.  \n**Element:** `Microsoft Excel (.xlsx)` menu item within the Download submenu.",
         "persistence": {
             "daily_counts": {
                 "2026-02-23": 498,
@@ -181,7 +181,7 @@
                 "action": "wait",
                 "app_name": "brave.exe",
                 "window_title": "Skill Suggestions for User - Brave",
-                "description": "Target: Microsoft Excel (.xlsx) | Goal: The business intent is to download the \"Fix of warehouse\" spreadsheet in a specific file format. Based on the sequence provided, the user has initiated a download which triggered a save prompt from the browser.\n\nDownload the spreadsheet 'Fix of warehouse'",
+                "description": "Target: UI Component | Goal: Based on the sequence of user actions and the provided screenshot, here is the business intent and the targeted UI element:\n\n**Goal:** Download the \"Fix of warehouse\" spreadsheet as a Microsoft Excel (.xlsx) file.  \n**Element:** `Microsoft Excel (.xlsx)` menu item within the Download submenu.",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/92fc085b-9c28-4ff9-9e02-1904f53bf52c.webp"
             },
@@ -190,7 +190,7 @@
                 "action": "wait",
                 "app_name": "brave.exe",
                 "window_title": "Fix of warehouse - Google Sheets - Brave",
-                "description": "Target: Microsoft Excel (.xlsx) | Goal: The business intent is to download the \"Fix of warehouse\" spreadsheet in a specific file format. Based on the sequence provided, the user has initiated a download which triggered a save prompt from the browser.\n\nDownload the spreadsheet 'Fix of warehouse'",
+                "description": "Target: UI Component | Goal: Based on the sequence of user actions and the provided screenshot, here is the business intent and the targeted UI element:\n\n**Goal:** Download the \"Fix of warehouse\" spreadsheet as a Microsoft Excel (.xlsx) file.  \n**Element:** `Microsoft Excel (.xlsx)` menu item within the Download submenu.",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/04f724e5-c666-41cd-8910-a80f20f57f55.webp"
             },
@@ -199,7 +199,7 @@
                 "action": "wait",
                 "app_name": "brave.exe",
                 "window_title": "Fix of warehouse - Google Sheets - Brave",
-                "description": "Target: Microsoft Excel (.xlsx) | Goal: The business intent is to download the \"Fix of warehouse\" spreadsheet in a specific file format. Based on the sequence provided, the user has initiated a download which triggered a save prompt from the browser.\n\nDownload the spreadsheet 'Fix of warehouse'",
+                "description": "Target: UI Component | Goal: Based on the sequence of user actions and the provided screenshot, here is the business intent and the targeted UI element:\n\n**Goal:** Download the \"Fix of warehouse\" spreadsheet as a Microsoft Excel (.xlsx) file.  \n**Element:** `Microsoft Excel (.xlsx)` menu item within the Download submenu.",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/ff8f684e-c76c-44fa-810a-67c30c74b421.webp"
             },
@@ -208,7 +208,7 @@
                 "action": "wait",
                 "app_name": "brave.exe",
                 "window_title": "doc-14-6s-sheets.googleusercontent.com wants to save",
-                "description": "Target: Microsoft Excel (.xlsx) | Goal: The business intent is to download the \"Fix of warehouse\" spreadsheet in a specific file format. Based on the sequence provided, the user has initiated a download which triggered a save prompt from the browser.\n\nDownload the spreadsheet 'Fix of warehouse'",
+                "description": "Target: UI Component | Goal: Based on the sequence of user actions and the provided screenshot, here is the business intent and the targeted UI element:\n\n**Goal:** Download the \"Fix of warehouse\" spreadsheet as a Microsoft Excel (.xlsx) file.  \n**Element:** `Microsoft Excel (.xlsx)` menu item within the Download submenu.",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/c0a345d3-4c8c-47e7-986d-9c979e27168e.webp"
             }
@@ -217,7 +217,7 @@
     {
         "workflow_id": "WP-adac8b8b",
         "employee_id": "EMP-0025",
-        "intent_summary": "1. **Business Intent:** The user is performing inventory management tasks, specifically transitioning from updating a benchmark product to retrieving and viewing the list of product stock batches.\n\n2. **Targeted UI element:**\nList product stock batches",
+        "intent_summary": "The business intent is to view or execute the next API request in the sequence within the \"Inventory planing\" collection in Postman. Following the update of a benchmark product, the user now wants to list product stock batches.\n\n**Goal",
         "persistence": {
             "daily_counts": {
                 "2026-02-23": 108,
@@ -235,7 +235,7 @@
                 "action": "wait",
                 "app_name": "Postman.exe",
                 "window_title": "list benchmark products - My Workspace",
-                "description": "Target: list product stock batches | Goal: 1. **Business Intent:** The user is performing inventory management tasks, specifically transitioning from updating a benchmark product to retrieving and viewing the list of product stock batches.\n\n2. **Targeted UI element:**\nList product stock batches",
+                "description": "Target: Element**\nList product stock batches | Goal: The business intent is to view or execute the next API request in the sequence within the \"Inventory planing\" collection in Postman. Following the update of a benchmark product, the user now wants to list product stock batches.\n\n**Goal",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/ddb2f9ae-528b-4082-b340-72f4070672b8.webp"
             },
@@ -244,7 +244,7 @@
                 "action": "wait",
                 "app_name": "Postman.exe",
                 "window_title": "create benchmark product - My Workspace",
-                "description": "Target: list product stock batches | Goal: 1. **Business Intent:** The user is performing inventory management tasks, specifically transitioning from updating a benchmark product to retrieving and viewing the list of product stock batches.\n\n2. **Targeted UI element:**\nList product stock batches",
+                "description": "Target: Element**\nList product stock batches | Goal: The business intent is to view or execute the next API request in the sequence within the \"Inventory planing\" collection in Postman. Following the update of a benchmark product, the user now wants to list product stock batches.\n\n**Goal",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/a1a1d2f0-00a4-44be-b077-6d53680551d3.webp"
             },
@@ -253,7 +253,7 @@
                 "action": "wait",
                 "app_name": "Postman.exe",
                 "window_title": "update benchmark product - My Workspace",
-                "description": "Target: list product stock batches | Goal: 1. **Business Intent:** The user is performing inventory management tasks, specifically transitioning from updating a benchmark product to retrieving and viewing the list of product stock batches.\n\n2. **Targeted UI element:**\nList product stock batches",
+                "description": "Target: Element**\nList product stock batches | Goal: The business intent is to view or execute the next API request in the sequence within the \"Inventory planing\" collection in Postman. Following the update of a benchmark product, the user now wants to list product stock batches.\n\n**Goal",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/d5b571dc-b8e8-4e62-aa8f-74008f87d3dd.webp"
             },
@@ -262,7 +262,7 @@
                 "action": "wait",
                 "app_name": "Postman.exe",
                 "window_title": "list product stock batches - My Workspace",
-                "description": "Target: list product stock batches | Goal: 1. **Business Intent:** The user is performing inventory management tasks, specifically transitioning from updating a benchmark product to retrieving and viewing the list of product stock batches.\n\n2. **Targeted UI element:**\nList product stock batches",
+                "description": "Target: Element**\nList product stock batches | Goal: The business intent is to view or execute the next API request in the sequence within the \"Inventory planing\" collection in Postman. Following the update of a benchmark product, the user now wants to list product stock batches.\n\n**Goal",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/533138aa-d49f-4143-a7eb-ee61a6cf1a7e.webp"
             }
@@ -271,7 +271,7 @@
     {
         "workflow_id": "WP-cb50116d",
         "employee_id": "EMP-0025",
-        "intent_summary": "The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal",
+        "intent_summary": "1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal",
         "persistence": {
             "daily_counts": {
                 "2026-02-23": 49,
@@ -289,7 +289,7 @@
                 "action": "wait",
                 "app_name": "brave.exe",
                 "window_title": "app.afromessage.com is asking you to",
-                "description": "Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal",
+                "description": "Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/c0ef8052-18ae-4ede-a975-a5d29ec55bf8.webp"
             },
@@ -298,7 +298,7 @@
                 "action": "click",
                 "app_name": "brave.exe",
                 "window_title": "YouTube",
-                "description": "Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal",
+                "description": "Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/a2b082ae-567b-48ed-a16b-3230c2320e58.webp"
             },
@@ -307,7 +307,7 @@
                 "action": "wait",
                 "app_name": "brave.exe",
                 "window_title": "Afro Message | The Enterprise Grade SMS Service Provider In Ethiopia! - Brave",
-                "description": "Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal",
+                "description": "Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/236bc1f2-8831-4f22-93af-a83605775724.webp"
             },
@@ -316,7 +316,7 @@
                 "action": "wait",
                 "app_name": "brave.exe",
                 "window_title": "Sign in - Google Accounts - Brave",
-                "description": "Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal",
+                "description": "Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/d92f3f19-666b-4a9d-94cf-ab54fcdbd876.webp"
             }
@@ -325,7 +325,7 @@
     {
         "workflow_id": "WP-0029b07b",
         "employee_id": "EMP-0028",
-        "intent_summary": "Run SQL query",
+        "intent_summary": "The business intent is to execute the currently written SQL query in Apache Superset's SQL Lab to retrieve and analyze data.\n\nRun SQL query",
         "persistence": {
             "daily_counts": {
                 "2026-02-23": 41,
@@ -343,7 +343,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "Superset - Google Chrome",
-                "description": "Target: RUN button | Goal: Run SQL query",
+                "description": "Target: RUN button (blue button in the SQL Lab interface) | Goal: The business intent is to execute the currently written SQL query in Apache Superset's SQL Lab to retrieve and analyze data.\n\nRun SQL query",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/27d95c78-5c80-4c93-8aef-7b3952aeaff0.webp"
             },
@@ -352,7 +352,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "Superset - Google Chrome",
-                "description": "Target: RUN button | Goal: Run SQL query",
+                "description": "Target: RUN button (blue button in the SQL Lab interface) | Goal: The business intent is to execute the currently written SQL query in Apache Superset's SQL Lab to retrieve and analyze data.\n\nRun SQL query",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/3b87657d-85ed-4143-8c09-7807a9b82808.webp"
             },
@@ -361,7 +361,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "Superset - Google Chrome",
-                "description": "Target: RUN button | Goal: Run SQL query",
+                "description": "Target: RUN button (blue button in the SQL Lab interface) | Goal: The business intent is to execute the currently written SQL query in Apache Superset's SQL Lab to retrieve and analyze data.\n\nRun SQL query",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/42f0787f-52a7-481f-811c-65f3cc1f9303.webp"
             },
@@ -370,7 +370,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "Superset - Google Chrome",
-                "description": "Target: RUN button | Goal: Run SQL query",
+                "description": "Target: RUN button (blue button in the SQL Lab interface) | Goal: The business intent is to execute the currently written SQL query in Apache Superset's SQL Lab to retrieve and analyze data.\n\nRun SQL query",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/9ce0f763-c200-4056-894f-4d21e136c317.webp"
             }
@@ -379,7 +379,7 @@
     {
         "workflow_id": "WP-6ad262fa",
         "employee_id": "EMP-0028",
-        "intent_summary": "Goal: Execute the SQL query to retrieve results",
+        "intent_summary": "Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data",
         "persistence": {
             "daily_counts": {
                 "2026-02-23": 10,
@@ -397,7 +397,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "Financial Dashbord - Google Chrome",
-                "description": "Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results",
+                "description": "Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/0987647d-3854-49ac-bc0e-c1c3b95bf3c7.webp"
             },
@@ -406,7 +406,7 @@
                 "action": "click",
                 "app_name": "chrome.exe",
                 "window_title": "Superset - Google Chrome",
-                "description": "Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results",
+                "description": "Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/d9f1bc58-a2ab-46ab-8f1d-a825b6d219e7.webp"
             },
@@ -415,7 +415,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "Superset - Google Chrome",
-                "description": "Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results",
+                "description": "Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/b59c4fdb-5722-447b-922b-602a0deae69a.webp"
             },
@@ -424,7 +424,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "Superset - Google Chrome",
-                "description": "Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results",
+                "description": "Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/36ced11f-2820-41de-a7fa-624eb7d87e76.webp"
             }
@@ -433,7 +433,7 @@
     {
         "workflow_id": "WP-7464f98e",
         "employee_id": "EMP-0028",
-        "intent_summary": "Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query",
+        "intent_summary": "Goal: Select the 'Query chipchip.drivers report new distance' query from the list",
         "persistence": {
             "daily_counts": {
                 "2026-02-23": 7,
@@ -451,7 +451,7 @@
                 "action": "click",
                 "app_name": "chrome.exe",
                 "window_title": "Superset - Google Chrome",
-                "description": "Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query",
+                "description": "Target: Element: Query chipchip.drivers report new distance | Goal: Goal: Select the 'Query chipchip.drivers report new distance' query from the list",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/c231bd7c-a201-4d59-a896-40b457980964.webp"
             },
@@ -460,7 +460,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "Superset - Google Chrome",
-                "description": "Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query",
+                "description": "Target: Element: Query chipchip.drivers report new distance | Goal: Goal: Select the 'Query chipchip.drivers report new distance' query from the list",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/e4087370-a45b-40e9-b834-f0b9fb1db00d.webp"
             },
@@ -469,7 +469,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "Superset - Google Chrome",
-                "description": "Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query",
+                "description": "Target: Element: Query chipchip.drivers report new distance | Goal: Goal: Select the 'Query chipchip.drivers report new distance' query from the list",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/3e4aeaf2-5dbe-4e09-a616-14d37579705c.webp"
             },
@@ -478,7 +478,7 @@
                 "action": "wait",
                 "app_name": "chrome.exe",
                 "window_title": "Superset - Google Chrome",
-                "description": "Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query",
+                "description": "Target: Element: Query chipchip.drivers report new distance | Goal: Goal: Select the 'Query chipchip.drivers report new distance' query from the list",
                 "params": {},
                 "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/123227ae-07a9-4beb-b517-332546e94943.webp"
             }

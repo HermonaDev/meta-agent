@@ -1,10 +1,12 @@
-import os
 import time
-import requests
 from io import BytesIO
-from PIL import Image
+
+import requests
 from google import genai
+from PIL import Image
+
 from src.core.schemas import WorkflowBlueprint
+
 
 class VisionLabeler:
     def __init__(self, api_key: str):

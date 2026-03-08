@@ -5,8 +5,8 @@
     "complexity": 4
   },
   "logic": {
-    "system_prompt": "\n            ROLE: Specialized Automation Agent (WP-56e4b36a)\n            CONTEXT: Operating within chrome.exe for Employee EMP-0053.\n            GOAL: Goal: View bank details for a refund request\n            \n            DYNAMIC INSTRUCTIONS:\n            Step 0: Target: Element: View button | Goal: Goal: View bank details for a refund request\nStep 1: Target: Element: View button | Goal: Goal: View bank details for a refund request\nStep 2: Target: Element: View button | Goal: Goal: View bank details for a refund request\nStep 3: Target: Element: View button | Goal: Goal: View bank details for a refund request\n            \n            OPERATIONAL GUARDRAILS:\n            1. Use 'wait_for_visual' before every click to ensure the UI is ready.\n            2. If the 'window_title' does not match the step requirement, retry once then pause.\n            3. Always log the result of a 'copy_paste' action.\n            \n            AVAILABLE TOOLSET:\n            - click_ui(target_label: str): Performs a visual-anchored click.\n            - type_into_field(text: str, field_name: str): Types text into a targeted input.\n            - switch_context(app_name: str): Focuses the target application.\n            - verify_state(image_url: str): Uses Vision to confirm the UI matches the expected step.\n            ",
-    "intent": "Goal: View bank details for a refund request",
+    "system_prompt": "\n            ROLE: Specialized Automation Agent (WP-56e4b36a)\n            CONTEXT: Operating within chrome.exe for Employee EMP-0053.\n            GOAL: Close the bank details popup\n            \n            DYNAMIC INSTRUCTIONS:\n            Step 0: Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup\nStep 1: Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup\nStep 2: Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup\nStep 3: Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup\n            \n            OPERATIONAL GUARDRAILS:\n            1. Use 'wait_for_visual' before every click to ensure the UI is ready.\n            2. If the 'window_title' does not match the step requirement, retry once then pause.\n            3. Always log the result of a 'copy_paste' action.\n            \n            AVAILABLE TOOLSET:\n            - click_ui(target_label: str): Performs a visual-anchored click.\n            - type_into_field(text: str, field_name: str): Types text into a targeted input.\n            - switch_context(app_name: str): Focuses the target application.\n            - verify_state(image_url: str): Uses Vision to confirm the UI matches the expected step.\n            ",
+    "intent": "Close the bank details popup",
     "visual_anchors": [
       "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/3d11fdb1-be87-44c8-a0af-3a3faa244975.webp",
       "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/28d129d5-a4ae-4991-bca6-bb1cdabe1e58.webp",
@@ -20,7 +20,7 @@
       "action": "wait",
       "app_name": "chrome.exe",
       "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-      "description": "Target: Element: View button | Goal: Goal: View bank details for a refund request",
+      "description": "Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/3d11fdb1-be87-44c8-a0af-3a3faa244975.webp"
     },
@@ -29,7 +29,7 @@
       "action": "wait",
       "app_name": "chrome.exe",
       "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-      "description": "Target: Element: View button | Goal: Goal: View bank details for a refund request",
+      "description": "Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/28d129d5-a4ae-4991-bca6-bb1cdabe1e58.webp"
     },
@@ -38,7 +38,7 @@
       "action": "click",
       "app_name": "chrome.exe",
       "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-      "description": "Target: Element: View button | Goal: Goal: View bank details for a refund request",
+      "description": "Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/f2f08f00-8889-4443-b078-83f8fcb0a3eb.webp"
     },
@@ -47,7 +47,7 @@
       "action": "wait",
       "app_name": "chrome.exe",
       "window_title": "chipchipadmindec.chipchip.social/dashboard/refund - Google Chrome",
-      "description": "Target: Element: View button | Goal: Goal: View bank details for a refund request",
+      "description": "Target: Close button (red) in the Bank Details modal | Goal: Close the bank details popup",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Betelhem_EMP-0053/screenshot/Feb23/ef0b3125-3ea6-4ce8-9fd9-b4dd32c72c80.webp"
     }

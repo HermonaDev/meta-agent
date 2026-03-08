@@ -5,8 +5,8 @@
     "complexity": 4
   },
   "logic": {
-    "system_prompt": "\n            ROLE: Specialized Automation Agent (WP-6ad262fa)\n            CONTEXT: Operating within chrome.exe for Employee EMP-0028.\n            GOAL: Goal: Execute the SQL query to retrieve results\n            \n            DYNAMIC INSTRUCTIONS:\n            Step 0: Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results\nStep 1: Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results\nStep 2: Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results\nStep 3: Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results\n            \n            OPERATIONAL GUARDRAILS:\n            1. Use 'wait_for_visual' before every click to ensure the UI is ready.\n            2. If the 'window_title' does not match the step requirement, retry once then pause.\n            3. Always log the result of a 'copy_paste' action.\n            \n            AVAILABLE TOOLSET:\n            - click_ui(target_label: str): Performs a visual-anchored click.\n            - type_into_field(text: str, field_name: str): Types text into a targeted input.\n            - switch_context(app_name: str): Focuses the target application.\n            - verify_state(image_url: str): Uses Vision to confirm the UI matches the expected step.\n            ",
-    "intent": "Goal: Execute the SQL query to retrieve results",
+    "system_prompt": "\n            ROLE: Specialized Automation Agent (WP-6ad262fa)\n            CONTEXT: Operating within chrome.exe for Employee EMP-0028.\n            GOAL: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data\n            \n            DYNAMIC INSTRUCTIONS:\n            Step 0: Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data\nStep 1: Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data\nStep 2: Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data\nStep 3: Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data\n            \n            OPERATIONAL GUARDRAILS:\n            1. Use 'wait_for_visual' before every click to ensure the UI is ready.\n            2. If the 'window_title' does not match the step requirement, retry once then pause.\n            3. Always log the result of a 'copy_paste' action.\n            \n            AVAILABLE TOOLSET:\n            - click_ui(target_label: str): Performs a visual-anchored click.\n            - type_into_field(text: str, field_name: str): Types text into a targeted input.\n            - switch_context(app_name: str): Focuses the target application.\n            - verify_state(image_url: str): Uses Vision to confirm the UI matches the expected step.\n            ",
+    "intent": "Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data",
     "visual_anchors": [
       "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/0987647d-3854-49ac-bc0e-c1c3b95bf3c7.webp",
       "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/d9f1bc58-a2ab-46ab-8f1d-a825b6d219e7.webp",
@@ -20,7 +20,7 @@
       "action": "wait",
       "app_name": "chrome.exe",
       "window_title": "Financial Dashbord - Google Chrome",
-      "description": "Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results",
+      "description": "Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/0987647d-3854-49ac-bc0e-c1c3b95bf3c7.webp"
     },
@@ -29,7 +29,7 @@
       "action": "click",
       "app_name": "chrome.exe",
       "window_title": "Superset - Google Chrome",
-      "description": "Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results",
+      "description": "Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/d9f1bc58-a2ab-46ab-8f1d-a825b6d219e7.webp"
     },
@@ -38,7 +38,7 @@
       "action": "wait",
       "app_name": "chrome.exe",
       "window_title": "Superset - Google Chrome",
-      "description": "Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results",
+      "description": "Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/b59c4fdb-5722-447b-922b-602a0deae69a.webp"
     },
@@ -47,7 +47,7 @@
       "action": "wait",
       "app_name": "chrome.exe",
       "window_title": "Superset - Google Chrome",
-      "description": "Target: Element: RUN | Goal: Goal: Execute the SQL query to retrieve results",
+      "description": "Target: RUN button | Goal: Based on the provided sequence and screenshot, the user is currently in the **SQL Lab** section of **Apache Superset**, looking at a specific query titled \"Query daily sold volume.\"\n\n**1. Business Intent:** Execute a SQL query to retrieve and analyze daily sales volume and Gross Merchandise Value (GMV) data.\n\n**2. Targeted UI Element:** \nExecute the SQL query to fetch the latest data",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/36ced11f-2820-41de-a7fa-624eb7d87e76.webp"
     }

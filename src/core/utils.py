@@ -1,7 +1,10 @@
 import re
 from typing import Dict, Optional
-import requests 
+
+import requests
+
 from .schemas import ActionType, WorkflowPersistence
+
 
 def calculate_persistence_metrics(daily_counts: Dict[str, int]) -> WorkflowPersistence:
     active_days = len(daily_counts)

@@ -8,3 +8,5 @@ core/__pycache__/
 *.db
 *.pyc
 *.bak
+.git/
+demo/

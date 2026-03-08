@@ -5,8 +5,8 @@
     "complexity": 4
   },
   "logic": {
-    "system_prompt": "\n            ROLE: Specialized Automation Agent (WP-cb50116d)\n            CONTEXT: Operating within brave.exe for Employee EMP-0025.\n            GOAL: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal\n            \n            DYNAMIC INSTRUCTIONS:\n            Step 0: Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal\nStep 1: Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal\nStep 2: Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal\nStep 3: Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal\n            \n            OPERATIONAL GUARDRAILS:\n            1. Use 'wait_for_visual' before every click to ensure the UI is ready.\n            2. If the 'window_title' does not match the step requirement, retry once then pause.\n            3. Always log the result of a 'copy_paste' action.\n            \n            AVAILABLE TOOLSET:\n            - click_ui(target_label: str): Performs a visual-anchored click.\n            - type_into_field(text: str, field_name: str): Types text into a targeted input.\n            - switch_context(app_name: str): Focuses the target application.\n            - verify_state(image_url: str): Uses Vision to confirm the UI matches the expected step.\n            ",
-    "intent": "The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal",
+    "system_prompt": "\n            ROLE: Specialized Automation Agent (WP-cb50116d)\n            CONTEXT: Operating within brave.exe for Employee EMP-0025.\n            GOAL: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal\n            \n            DYNAMIC INSTRUCTIONS:\n            Step 0: Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal\nStep 1: Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal\nStep 2: Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal\nStep 3: Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal\n            \n            OPERATIONAL GUARDRAILS:\n            1. Use 'wait_for_visual' before every click to ensure the UI is ready.\n            2. If the 'window_title' does not match the step requirement, retry once then pause.\n            3. Always log the result of a 'copy_paste' action.\n            \n            AVAILABLE TOOLSET:\n            - click_ui(target_label: str): Performs a visual-anchored click.\n            - type_into_field(text: str, field_name: str): Types text into a targeted input.\n            - switch_context(app_name: str): Focuses the target application.\n            - verify_state(image_url: str): Uses Vision to confirm the UI matches the expected step.\n            ",
+    "intent": "1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal",
     "visual_anchors": [
       "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/c0ef8052-18ae-4ede-a975-a5d29ec55bf8.webp",
       "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/a2b082ae-567b-48ed-a16b-3230c2320e58.webp",
@@ -20,7 +20,7 @@
       "action": "wait",
       "app_name": "brave.exe",
       "window_title": "app.afromessage.com is asking you to",
-      "description": "Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal",
+      "description": "Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/c0ef8052-18ae-4ede-a975-a5d29ec55bf8.webp"
     },
@@ -29,7 +29,7 @@
       "action": "click",
       "app_name": "brave.exe",
       "window_title": "YouTube",
-      "description": "Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal",
+      "description": "Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/a2b082ae-567b-48ed-a16b-3230c2320e58.webp"
     },
@@ -38,7 +38,7 @@
       "action": "wait",
       "app_name": "brave.exe",
       "window_title": "Afro Message | The Enterprise Grade SMS Service Provider In Ethiopia! - Brave",
-      "description": "Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal",
+      "description": "Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/236bc1f2-8831-4f22-93af-a83605775724.webp"
     },
@@ -47,7 +47,7 @@
       "action": "wait",
       "app_name": "brave.exe",
       "window_title": "Sign in - Google Accounts - Brave",
-      "description": "Target: Element**\nLog in to Afro Message using Google | Goal: The business intent is to log in to the Afro Message platform (an SMS service provider) using a Google account for authentication.\n\n**Goal",
+      "description": "Target: Element:** Log in to Afro Message using Google | Goal: 1. **Business Intent:** The user is attempting to log in to the Afro Message service (an enterprise-grade SMS service provider in Ethiopia) using their Google account credentials for authentication.\n\n2. **Targeted UI element? Format: Goal",
       "params": {},
       "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Natnael_EMP-0025/screenshot/Feb23/d92f3f19-666b-4a9d-94cf-ab54fcdbd876.webp"
     }

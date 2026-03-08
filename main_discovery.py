@@ -1,13 +1,15 @@
-import sys, os
+import os
+import sys
 import time
+
 from dotenv import load_dotenv
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from src.core.database import DatabaseManager
+from src.discovery.exporter import WorkflowExporter
 from src.discovery.repetition import PatternMatcher
 from src.discovery.vision_labeler import VisionLabeler
-from src.discovery.exporter import WorkflowExporter
 
 load_dotenv()
 

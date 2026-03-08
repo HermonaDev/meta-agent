@@ -1,11 +1,11 @@
 import json
 import os
 import time
+from typing import Dict
+
 import requests
 from loguru import logger
-from typing import Dict
 from playwright.sync_api import sync_playwright
-import pyautogui
 
 # Set up logging for the workforce
 logger.remove()
@@ -22,7 +22,7 @@ class AgentRuntime:
     def __init__(self, brain_path: str):
         if not os.path.exists(brain_path):
             logger.error(f"Brain file not found at {brain_path}")
-            raise FileNotFoundError(f"Missing configuration for agent.")
+            raise FileNotFoundError("Missing configuration for agent.")
             
         with open(brain_path, 'r') as f:
             self.brain = json.load(f)

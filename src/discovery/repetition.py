@@ -1,8 +1,10 @@
 import hashlib
 from collections import Counter
-from typing import List, Dict
+from typing import List
+
 from src.core.schemas import CapturedEvent, WorkflowBlueprint, WorkflowStep
 from src.core.utils import calculate_persistence_metrics, map_raw_event_to_action
+
 
 class PatternMatcher:
     def __init__(self, window_size: int = 4):

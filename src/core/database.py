@@ -1,9 +1,11 @@
 import sqlite3
+from typing import List
+
+import numpy as np
 import pandas as pd
-import numpy as np 
-from typing import List, Optional
-from pydantic import BaseModel
+
 from src.core.schemas import CapturedEvent
+
 
 class DatabaseManager:
     """

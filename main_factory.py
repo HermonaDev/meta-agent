@@ -1,5 +1,6 @@
 from src.factory.meta_agent import MetaAgentFactory
 
+
 def run_task_2_generation():
     print("🏗️  Starting Meta-Agent Factory...")
     

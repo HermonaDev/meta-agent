@@ -1,0 +1,18 @@
+[project]
+name = "chipchip-meta-agent"
+version = "0.1.0"
+dependencies = [
+    "pydantic>=2.0.0",
+    "loguru",
+    "pandas",
+    "google-generativeai",
+    "playwright",
+    "python-dotenv",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"] # Error, Flake, Isort (imports)

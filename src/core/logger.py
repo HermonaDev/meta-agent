@@ -1,5 +1,6 @@
-from loguru import logger
 import sys
+
+from loguru import logger
 
 # Configure logger to save to a file and output to terminal
 logger.remove()
