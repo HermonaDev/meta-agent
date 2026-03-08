@@ -1,39 +1,43 @@
-import json
 import os
-import requests
-from PIL import Image
-from io import BytesIO
-import pyautogui # For desktop clicks
-from playwright.sync_api import sync_playwright # For browser clicks
+import sys
+from loguru import logger
 
-class AgentRuntime:
-    def __init__(self, brain_path: str):
-        with open(brain_path, 'r') as f:
-            self.brain = json.load(f)
-            
-    def run(self, real_mode=False):
-        print(f"🤖 Agent {self.brain['metadata']['agent_id']} is waking up...")
-        
-        for step in self.brain['execution_plan']:
-            print(f"--- [Step {step['step_id']}] ---")
-            
-            # 1. VISUAL VERIFICATION (The 'Check')
-            anchor_url = step['screenshot_url']
-            if anchor_url:
-                print(f"👁️ Comparing live UI against anchor: {anchor_url[-20:]}")
-                # In real_mode, you'd use CV2 or Gemini to compare screen to anchor
-            
-            # 2. ACTION EXECUTION
-            if real_mode:
-                self._execute_physical_action(step)
-            else:
-                print(f"✅ LOG: Simulated {step['action']} on {step['app_name']}")
+# 1. Ensure the 'src' directory is in the path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-    def _execute_physical_action(self, step):
-        """This connects the 'Brain' to the 'Hands'"""
-        if "chrome.exe" in step['app_name'].lower():
-            # Playwright Logic
-            print(f"🌐 Triggering Playwright click for {step['description']}")
-        else:
-            # PyAutoGUI Logic
-            print(f"🖱️ Triggering Desktop move for {step['description']}")
+# Import your new consolidated Runtime
+try:
+    from src.factory.runtime import AgentRuntime
+except ImportError as e:
+    print(f"❌ Critical Import Error: {e}")
+    sys.exit(1)
+
+def run_demo():
+    # 2. Path to your generated brains
+    config_dir = "agent_configs"
+    
+    if not os.path.exists(config_dir):
+        logger.error(f"Folder '{config_dir}' not found. Did you run main_factory.py?")
+        return
+
+    # 3. Find all brain files
+    brain_files = [f for f in os.listdir(config_dir) if f.endswith(".json")]
+
+    if not brain_files:
+        logger.warning(f"No agent brains found in {config_dir}")
+        return
+
+    logger.info(f"🔎 Found {len(brain_files)} agents. Initializing demo for the first one...")
+
+    # 4. Pick one agent (e.g., the SQL query agent) and run it in simulation mode
+    selected_brain_path = os.path.join(config_dir, brain_files[0])
+    
+    try:
+        runner = AgentRuntime(selected_brain_path)
+        # We use live_mode=False for the simulation required by the demo
+        runner.run(live_mode=False) 
+    except Exception as e:
+        logger.exception(f"Failed to execute agent: {e}")
+
+if __name__ == "__main__":
+    run_demo()
