@@ -31,25 +31,16 @@ class MetaAgentFactory:
             
             # The 'System Prompt' is the DNA of the generated agent.
             # It tells the secondary LLM how to reason about this specific task.
-            system_prompt = f"""
-            ROLE: Specialized Automation Agent ({blueprint.workflow_id})
-            CONTEXT: Operating within {blueprint.steps[0].app_name} for Employee {blueprint.employee_id}.
-            GOAL: {blueprint.intent_summary}
-            
-            DYNAMIC INSTRUCTIONS:
-            {self._format_steps(blueprint)}
-            
-            OPERATIONAL GUARDRAILS:
-            1. Use 'wait_for_visual' before every click to ensure the UI is ready.
-            2. If the 'window_title' does not match the step requirement, retry once then pause.
-            3. Always log the result of a 'copy_paste' action.
-            
-            AVAILABLE TOOLSET:
-            - click_ui(target_label: str): Performs a visual-anchored click.
-            - type_into_field(text: str, field_name: str): Types text into a targeted input.
-            - switch_context(app_name: str): Focuses the target application.
-            - verify_state(image_url: str): Uses Vision to confirm the UI matches the expected step.
-            """
+            system_prompt = (
+                f"ROLE: Specialized Automation Agent ({blueprint.workflow_id})\n"
+                f"CONTEXT: Operating in {blueprint.steps[0].app_name} "
+                f"for Employee {blueprint.employee_id}.\n"
+                f"GOAL: {blueprint.intent_summary}\n\n"
+                "OPERATIONAL GUARDRAILS:\n"
+                "1. Use 'wait_for_visual' before every click.\n"
+                "2. If 'window_title' mismatch occurs, retry then pause.\n"
+                "3. Always log 'copy_paste' results."
+            )
             
             agent_manifest = {
                 "metadata": {
@@ -71,8 +62,9 @@ class MetaAgentFactory:
         return generated_paths
 
     def _format_steps(self, blueprint: WorkflowBlueprint) -> str:
-        return "\n".join([f"Step {s.step_id}: {s.description}" for s in blueprint.steps])
-
+        steps_list = [f"Step {s.step_id}: {s.description}" for s in blueprint.steps]
+        return "\n".join(steps_list)
+    
     def _save_config(self, manifest: Dict) -> str:
         os.makedirs("agent_configs", exist_ok=True)
         filename = f"agent_configs/brain_{manifest['metadata']['agent_id']}.json"

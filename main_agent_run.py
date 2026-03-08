@@ -28,7 +28,8 @@ def run_demo():
         logger.warning(f"No agent brains found in {config_dir}")
         return
 
-    logger.info(f"🔎 Found {len(brain_files)} agents. Initializing demo for the first one...")
+    msg = f"🔎 Found {len(brain_files)} agents. Initializing demo..."
+    logger.info(msg)
 
     # 4. Pick one agent (e.g., the SQL query agent) and run it in simulation mode
     selected_brain_path = os.path.join(config_dir, brain_files[0])

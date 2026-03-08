@@ -10,7 +10,9 @@ class PatternMatcher:
     def __init__(self, window_size: int = 4):
         self.window_size = window_size
 
-    def find_repetitive_blueprints(self, events: List[CapturedEvent]) -> List[WorkflowBlueprint]:
+    def find_repetitive_blueprints(
+        self, events: List[CapturedEvent]
+    ) -> List[WorkflowBlueprint]:
         patterns = {}
         
         # 1. SLIDING WINDOW (Syntactic Matching)
@@ -55,10 +57,14 @@ class PatternMatcher:
                 blueprints.append(WorkflowBlueprint(
                     workflow_id=f"WP-{p_hash[:8]}",
                     employee_id=data["events"][0].id_employee,
-                    intent_summary="Discovered Repetitive Task", # To be enriched by AI next
+                    intent_summary="Discovered Repetitive Task", 
                     persistence=persistence,
                     steps=steps
                 ))
         
-        # Sort by total occurrences to find the 'Hottest' workflows
-        return sorted(blueprints, key=lambda x: x.persistence.total_occurrences, reverse=True)
+       # Sort by total occurrences
+        return sorted(
+            blueprints, 
+            key=lambda x: x.persistence.total_occurrences, 
+            reverse=True
+        )

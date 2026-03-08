@@ -14,7 +14,9 @@ class VisionLabeler:
         self.client = genai.Client(api_key=api_key)
         self.model_id = "gemini-flash-latest" 
 
-    def enrich_blueprint(self, blueprint: WorkflowBlueprint, retries: int = 1) -> WorkflowBlueprint:
+    def enrich_blueprint(
+        self, blueprint: WorkflowBlueprint, retries: int = 1
+        ) -> WorkflowBlueprint:
         sample_step = blueprint.steps[len(blueprint.steps)//2]
         image_url = sample_step.screenshot_url
         
@@ -26,15 +28,15 @@ class VisionLabeler:
                 img = Image.open(BytesIO(resp.content))
 
                 # Create a string of all window titles in this sequence
-                context_titles = " -> ".join([s.window_title for s in blueprint.steps if s.window_title])
+                titles = [s.window_title for s in blueprint.steps if s.window_title]
+                context_titles = " -> ".join(titles)
 
                 prompt = (
-                    f"The user sequence is: {context_titles}. "
-                    f"The current application is {sample_step.app_name}. "
-                    "Based on this sequence and the attached screenshot: "
-                    "1. What is the business intent? 2. Targeted UI element? "
+                    f"The user sequence: {context_titles}. " # Using the variable here!
+                    f"Analyze this UI screenshot from {sample_step.app_name}. "
+                    "Identify: 1. High-level business goal. 2. Specific UI element. "
                     "Format: Goal | Element"
-)
+                )
 
                 # 2. Call Gemini
                 ai_response = self.client.models.generate_content(
@@ -44,18 +46,21 @@ class VisionLabeler:
                 
                 raw_text = ai_response.text
                 intent = raw_text.split("|")[0].strip() if "|" in raw_text else raw_text
-                element = raw_text.split("|")[1].strip() if "|" in raw_text else "UI Component"
-
+                
+                element = "UI Component"
+                if "|" in raw_text:
+                    element = raw_text.split("|")[1].strip()
+                    
                 # 3. Handle Frozen Pydantic instances with model_copy
-                new_steps = [
-                    s.model_copy(update={"description": f"Target: {element} | Goal: {intent}"})
-                    for s in blueprint.steps
-                ]
+                new_steps = []
+                for s in blueprint.steps:
+                    new_steps.append(s.model_copy(update={
+                        "description": f"Target: {element} | Goal: {intent}"
+                    }))
 
                 return blueprint.model_copy(update={
-                    "intent_summary": intent,
-                    "steps": new_steps
-                })
+            "intent_summary": "Discovered Business Process"
+        })
 
             except Exception as e:
                 if "429" in str(e):
@@ -66,4 +71,6 @@ class VisionLabeler:
                 print(f"  ⚠️ Vision failed for {blueprint.workflow_id}: {e}")
                 break
 
-        return blueprint.model_copy(update={"intent_summary": "Discovered Business Process"})
+        return blueprint.model_copy(
+            update={"intent_summary": "Discovered Business Process"}
+        )

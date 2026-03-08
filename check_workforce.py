@@ -17,9 +17,10 @@ def display_workforce():
         with open(os.path.join(config_dir, cfg), 'r') as f:
             data = json.load(f)
             meta = data['metadata']
-            # Clean up the intent for display
             intent = data['logic']['intent'].replace('\n', ' ').strip()
-            if len(intent) > 45: intent = intent[:42] + "..."
+            
+            if len(intent) > 45: 
+                intent = intent[:42] + "..."
             
             print(f"{meta['agent_id']:<15} | {meta['target_employee']:<10} | {intent}")
 

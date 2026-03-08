@@ -31,10 +31,6 @@ class AgentRuntime:
         self.intent = self.brain['logic']['intent']
 
     def run(self, live_mode: bool = False):
-        """
-        Main execution loop.
-        Handles the 'Wait Trap' and asset verification before execution.
-        """
         logger.info(f"🤖 Agent {self.agent_id} waking up. Mission: {self.intent}")
 
         try:
@@ -43,16 +39,23 @@ class AgentRuntime:
             else:
                 self._run_simulated()
                 
-            logger.success(f"🏁 Mission Accomplished: Agent {self.agent_id} completed the task.")
+            msg = f"🏁 Mission Accomplished: Agent {self.agent_id} completed the task."
+            logger.success(msg)
         except Exception as e:
             logger.critical(f"💥 Critical Failure in Agent {self.agent_id}: {e}")
 
     def _run_simulated(self):
-        """Dry-run mode to verify the logic without moving the mouse."""
         for step in self.brain['execution_plan']:
             action = self._recover_intent(step)
-            logger.info(f"[Step {step['step_id']}] SIMULATING {action.upper()} in {step['app_name']}")
+            log_msg = f"[Step {step['step_id']}] SIMULATING {action.upper()}"
+            logger.info(f"{log_msg} in {step['app_name']}")
             time.sleep(0.5)
+
+    def _verify_asset(self, url: str) -> bool:
+        try:
+            return requests.head(url, timeout=3).status_code == 200
+        except Exception:
+            return False
 
     def _run_live(self):
         """Live-mode using Playwright and PyAutoGUI."""
@@ -63,8 +66,9 @@ class AgentRuntime:
             for step in self.brain['execution_plan']:
                 # 1. Asset Resilience Check
                 if not self._verify_asset(step['screenshot_url']):
-                    logger.warning(f"Step {step['step_id']}: Visual anchor missing. Proceeding with text-only context.")
-                
+                    msg = f"Step {step['step_id']}: Visual anchor missing."
+                    logger.warning(f"{msg} Using text-only context.")
+                    
                 # 2. Semantic Intent Recovery (The Wait Trap)
                 action = self._recover_intent(step)
                 
@@ -76,7 +80,7 @@ class AgentRuntime:
             browser.close()
 
     def _recover_intent(self, step: Dict) -> str:
-        """Fixes the 'Wait Trap' by checking if the AI-labeled description implies a Click/Type."""
+        """Fixes 'Wait Trap' by checking if AI description implies in action."""
         action = step['action'].lower()
         desc = step['description'].lower()
         
@@ -90,7 +94,7 @@ class AgentRuntime:
         """Resilience check for DigitalOcean URLs."""
         try:
             return requests.head(url, timeout=3).status_code == 200
-        except:
+        except Exception: 
             return False
 
     def _execute_physical_action(self, action: str, step: Dict, page):
