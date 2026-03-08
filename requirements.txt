@@ -15,3 +15,5 @@ loguru
 rich 
 
 requests
+pyautogui
+playwright
