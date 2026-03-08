@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "agent_id": "WP-0029b07b",
+    "target_employee": "EMP-0028",
+    "complexity": 4
+  },
+  "logic": {
+    "system_prompt": "\n            ROLE: Specialized Automation Agent (WP-0029b07b)\n            CONTEXT: Operating within chrome.exe for Employee EMP-0028.\n            GOAL: Run SQL query\n            \n            DYNAMIC INSTRUCTIONS:\n            Step 0: Target: RUN button | Goal: Run SQL query\nStep 1: Target: RUN button | Goal: Run SQL query\nStep 2: Target: RUN button | Goal: Run SQL query\nStep 3: Target: RUN button | Goal: Run SQL query\n            \n            OPERATIONAL GUARDRAILS:\n            1. Use 'wait_for_visual' before every click to ensure the UI is ready.\n            2. If the 'window_title' does not match the step requirement, retry once then pause.\n            3. Always log the result of a 'copy_paste' action.\n            \n            AVAILABLE TOOLSET:\n            - click_ui(target_label: str): Performs a visual-anchored click.\n            - type_into_field(text: str, field_name: str): Types text into a targeted input.\n            - switch_context(app_name: str): Focuses the target application.\n            - verify_state(image_url: str): Uses Vision to confirm the UI matches the expected step.\n            ",
+    "intent": "Run SQL query",
+    "visual_anchors": [
+      "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/27d95c78-5c80-4c93-8aef-7b3952aeaff0.webp",
+      "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/3b87657d-85ed-4143-8c09-7807a9b82808.webp",
+      "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/42f0787f-52a7-481f-811c-65f3cc1f9303.webp",
+      "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/9ce0f763-c200-4056-894f-4d21e136c317.webp"
+    ]
+  },
+  "execution_plan": [
+    {
+      "step_id": 0,
+      "action": "wait",
+      "app_name": "chrome.exe",
+      "window_title": "Superset - Google Chrome",
+      "description": "Target: RUN button | Goal: Run SQL query",
+      "params": {},
+      "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/27d95c78-5c80-4c93-8aef-7b3952aeaff0.webp"
+    },
+    {
+      "step_id": 1,
+      "action": "wait",
+      "app_name": "chrome.exe",
+      "window_title": "Superset - Google Chrome",
+      "description": "Target: RUN button | Goal: Run SQL query",
+      "params": {},
+      "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/3b87657d-85ed-4143-8c09-7807a9b82808.webp"
+    },
+    {
+      "step_id": 2,
+      "action": "wait",
+      "app_name": "chrome.exe",
+      "window_title": "Superset - Google Chrome",
+      "description": "Target: RUN button | Goal: Run SQL query",
+      "params": {},
+      "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/42f0787f-52a7-481f-811c-65f3cc1f9303.webp"
+    },
+    {
+      "step_id": 3,
+      "action": "wait",
+      "app_name": "chrome.exe",
+      "window_title": "Superset - Google Chrome",
+      "description": "Target: RUN button | Goal: Run SQL query",
+      "params": {},
+      "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/9ce0f763-c200-4056-894f-4d21e136c317.webp"
+    }
+  ]
+}

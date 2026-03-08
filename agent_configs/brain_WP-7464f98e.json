@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "agent_id": "WP-7464f98e",
+    "target_employee": "EMP-0028",
+    "complexity": 4
+  },
+  "logic": {
+    "system_prompt": "\n            ROLE: Specialized Automation Agent (WP-7464f98e)\n            CONTEXT: Operating within chrome.exe for Employee EMP-0028.\n            GOAL: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query\n            \n            DYNAMIC INSTRUCTIONS:\n            Step 0: Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query\nStep 1: Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query\nStep 2: Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query\nStep 3: Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query\n            \n            OPERATIONAL GUARDRAILS:\n            1. Use 'wait_for_visual' before every click to ensure the UI is ready.\n            2. If the 'window_title' does not match the step requirement, retry once then pause.\n            3. Always log the result of a 'copy_paste' action.\n            \n            AVAILABLE TOOLSET:\n            - click_ui(target_label: str): Performs a visual-anchored click.\n            - type_into_field(text: str, field_name: str): Types text into a targeted input.\n            - switch_context(app_name: str): Focuses the target application.\n            - verify_state(image_url: str): Uses Vision to confirm the UI matches the expected step.\n            ",
+    "intent": "Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query",
+    "visual_anchors": [
+      "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/c231bd7c-a201-4d59-a896-40b457980964.webp",
+      "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/e4087370-a45b-40e9-b834-f0b9fb1db00d.webp",
+      "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/3e4aeaf2-5dbe-4e09-a616-14d37579705c.webp",
+      "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/123227ae-07a9-4beb-b517-332546e94943.webp"
+    ]
+  },
+  "execution_plan": [
+    {
+      "step_id": 0,
+      "action": "click",
+      "app_name": "chrome.exe",
+      "window_title": "Superset - Google Chrome",
+      "description": "Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query",
+      "params": {},
+      "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/c231bd7c-a201-4d59-a896-40b457980964.webp"
+    },
+    {
+      "step_id": 1,
+      "action": "wait",
+      "app_name": "chrome.exe",
+      "window_title": "Superset - Google Chrome",
+      "description": "Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query",
+      "params": {},
+      "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/e4087370-a45b-40e9-b834-f0b9fb1db00d.webp"
+    },
+    {
+      "step_id": 2,
+      "action": "wait",
+      "app_name": "chrome.exe",
+      "window_title": "Superset - Google Chrome",
+      "description": "Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query",
+      "params": {},
+      "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/3e4aeaf2-5dbe-4e09-a616-14d37579705c.webp"
+    },
+    {
+      "step_id": 3,
+      "action": "wait",
+      "app_name": "chrome.exe",
+      "window_title": "Superset - Google Chrome",
+      "description": "Target: \"Untitled Query 470\" list item in the query dropdown menu | Goal: Based on the sequence and the screenshot, the user is navigating through saved queries in the Apache Superset SQL Lab. They have opened a dropdown list of available queries and are likely looking for a specific one to load.\n\n**Goal:** Open a specific saved SQL query in the SQL Lab.\n**Element:** \"Untitled Query 470\" (or another query item within the open dropdown menu).\n\n**Full Format:** Open a specific saved SQL query",
+      "params": {},
+      "screenshot_url": "https://fra1.digitaloceanspaces.com/mgscreenshot/chipchip_data/Rihana_EMP-0028/screenshot/Feb23/123227ae-07a9-4beb-b517-332546e94943.webp"
+    }
+  ]
+}
