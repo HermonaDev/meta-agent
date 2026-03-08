@@ -1,18 +1,28 @@
-import os
 import sys
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+import os
 
+# 1. Setup paths so we can find /src and /demo/runner
+current_dir = os.path.dirname(os.path.abspath(__file__))
+root_dir = os.path.abspath(os.path.join(current_dir, '..'))
+sys.path.append(root_dir)
+sys.path.append(current_dir)
+
+# 2. Correct Imports
 from src.factory.meta_agent import MetaAgentFactory
-from demo.runner import AgentRunner
+from runner import AgentRunner  # Standard import from the same folder
 
 def run_google_test():
-    # 1. GENERATE: The Meta-Agent builds the Google Agent's configuration
     print("🏗️  Step 1: Meta-Agent Factory building Google Agent...")
-    factory = MetaAgentFactory("outputs/google_test_workflow.json")
+    
+    # Path to the JSON
+    json_path = os.path.join(current_dir, "google_test_workflow.json")
+    
+    # Generate the brain
+    factory = MetaAgentFactory(json_path)
     brain_paths = factory.build_all_agents()
     
-    # 2. EXECUTE: The Operational Agent runs
-    print("\n🤖 Step 2: Starting the Generated Agent...")
+    print("\n🤖 Step 2: Starting the Generated Agent in LIVE mode...")
+    # Execute the brain
     runner = AgentRunner(brain_paths[0])
     runner.run_live()
 

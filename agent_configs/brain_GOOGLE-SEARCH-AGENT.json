@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "agent_id": "GOOGLE-SEARCH-AGENT",
+    "target_employee": "SYSTEM-TEST",
+    "complexity": 3
+  },
+  "logic": {
+    "system_prompt": "\n            ROLE: Specialized Automation Agent (GOOGLE-SEARCH-AGENT)\n            CONTEXT: Operating within chrome.exe for Employee SYSTEM-TEST.\n            GOAL: Search for ChipChip AI on Google and verify results\n            \n            DYNAMIC INSTRUCTIONS:\n            Step 0: Navigate to google.com\nStep 1: Type 'ChipChip Social' into the search bar\nStep 2: Press Enter to search\n            \n            OPERATIONAL GUARDRAILS:\n            1. Use 'wait_for_visual' before every click to ensure the UI is ready.\n            2. If the 'window_title' does not match the step requirement, retry once then pause.\n            3. Always log the result of a 'copy_paste' action.\n            \n            AVAILABLE TOOLSET:\n            - click_ui(target_label: str): Performs a visual-anchored click.\n            - type_into_field(text: str, field_name: str): Types text into a targeted input.\n            - switch_context(app_name: str): Focuses the target application.\n            - verify_state(image_url: str): Uses Vision to confirm the UI matches the expected step.\n            ",
+    "intent": "Search for ChipChip AI on Google and verify results",
+    "visual_anchors": [
+      "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+      "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+      "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    ]
+  },
+  "execution_plan": [
+    {
+      "step_id": 0,
+      "action": "navigation",
+      "app_name": "chrome.exe",
+      "window_title": "Google",
+      "description": "Navigate to google.com",
+      "params": {
+        "url": "https://www.google.com"
+      },
+      "screenshot_url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    {
+      "step_id": 1,
+      "action": "type",
+      "app_name": "chrome.exe",
+      "window_title": "Google",
+      "description": "Type 'ChipChip Social' into the search bar",
+      "params": {
+        "text": "ChipChip Social",
+        "selector": "textarea[name='q']"
+      },
+      "screenshot_url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    {
+      "step_id": 2,
+      "action": "click",
+      "app_name": "chrome.exe",
+      "window_title": "Google Search",
+      "description": "Press Enter to search",
+      "params": {
+        "key": "Enter"
+      },
+      "screenshot_url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    }
+  ]
+}

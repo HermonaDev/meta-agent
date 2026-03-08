@@ -1,9 +1,15 @@
 import json
 import time
+import os
 from playwright.sync_api import sync_playwright
 
 class AgentRunner:
+    """The 'Body' that executes a 'Brain' JSON using Playwright."""
+    
     def __init__(self, brain_path: str):
+        if not os.path.exists(brain_path):
+            raise FileNotFoundError(f"Brain file not found: {brain_path}")
+            
         with open(brain_path, 'r') as f:
             self.brain = json.load(f)
 
@@ -12,8 +18,8 @@ class AgentRunner:
         print(f"🚀 [LIVE MODE] Agent {self.brain['metadata']['agent_id']} is taking control...")
         
         with sync_playwright() as p:
-            # 1. Launch the 'Body' (The Browser)
-            browser = p.chromium.launch(headless=False) # False so you can see it move!
+            # Launch browser
+            browser = p.chromium.launch(headless=False) 
             page = browser.new_page()
             
             for step in self.brain['execution_plan']:
@@ -22,23 +28,19 @@ class AgentRunner:
                 action = step['action'].lower()
                 params = step.get('params', {})
 
-                # 2. Logic Mapping (Brain -> Body)
                 if action == "navigation":
                     page.goto(params['url'])
-                    
                 elif action == "type":
-                    # The Agent finds the selector and types
                     selector = params.get('selector', 'textarea')
                     page.fill(selector, params['text'])
-                    
                 elif action == "click" or action == "wait":
-                    # Handle keyboard 'Enter' or mouse clicks
                     if "key" in params:
                         page.keyboard.press(params['key'])
                     else:
-                        page.click(params.get('selector', 'button'))
+                        # Fallback for search button
+                        page.keyboard.press("Enter")
                 
-                time.sleep(2) # Delay so the interviewer can see the action
+                time.sleep(2) # Delay so you can see it!
 
             print(f"✅ Mission Complete. Closing browser.")
             browser.close()

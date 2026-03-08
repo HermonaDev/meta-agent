@@ -7,6 +7,7 @@
       "daily_counts": {"2026-02-23": 1},
       "is_2day_persistent": true,
       "is_3day_persistent": false,
+      "is_4day_persistent": false,
       "total_occurrences": 1
     },
     "steps": [
@@ -26,7 +27,7 @@
         "window_title": "Google",
         "description": "Type 'ChipChip Social' into the search bar",
         "params": {"text": "ChipChip Social", "selector": "textarea[name='q']"},
-        "screenshot_url": ""
+        "screenshot_url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
       },
       {
         "step_id": 2,
@@ -35,7 +36,7 @@
         "window_title": "Google Search",
         "description": "Press Enter to search",
         "params": {"key": "Enter"},
-        "screenshot_url": ""
+        "screenshot_url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
       }
     ]
   }
